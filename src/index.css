@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+.header,
+.component-one-bg {
+    background-color: hsl(217, 28%, 15%);
+}
+.component-two,
+.component-three {
+    background-color: hsl(218, 28%, 13%);
+}
+.bg-card {
+    background-color: hsl(219, 30%, 18%);
+}
+.bg-footer {
+    background-color: hsl(216, 53%, 9%);
+}
+.bg-footercard {
+    background-color: hsl(217, 28%, 15%);
+}
+
+.component-one-bg {
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.component-one-bg {
+    background-image: url("./assets/images/bg-curvy-mobile.svg");
+}
+
+@media (min-width: 425px) {
+    .component-one-bg {
+        background-image: url("./assets/images/bg-curvy-desktop.svg");
+        background-size: contain;
+    }
+}
