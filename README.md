@@ -33,7 +33,7 @@ This project is a solution to the Fylo Dark Theme Landing Page challenge. It's a
 ### Installation
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/m-92-h/Fylo-Landing-Page.git
 cd fylo-master
 npm install
 ```
