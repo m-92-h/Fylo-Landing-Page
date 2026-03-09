@@ -68,7 +68,7 @@ Make sure you have the following installed:
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/m-92-h/fylo-landing-page.git
+git clone https://github.com/m-92-h/Fylo-Landing-Page.git
 ```
 
 2. **Navigate to the project folder**
