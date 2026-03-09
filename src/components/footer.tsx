@@ -1,15 +1,29 @@
-import logo from "../assets/images/logo.svg";
-import emailIcon from "../assets/images/icon-email.svg";
-import locationIcon from "../assets/images/icon-location.svg";
-import phoneIcon from "../assets/images/icon-phone.svg";
+import logo from "../assets/logo.svg";
+import emailIcon from "../assets/icon-email.svg";
+import locationIcon from "../assets/icon-location.svg";
+import phoneIcon from "../assets/icon-phone.svg";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa6";
 import { useState } from "react";
+import type { IconType } from "react-icons";
+
+interface CardFooterProps {
+    email: string;
+    setEmail: (value: string) => void;
+    handleSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
+    error: string;
+}
+
+interface SocialIcon {
+    nameIcon: string;
+    Icon: IconType;
+    color: string;
+}
 
 export default function Footer() {
-    const [email, setEmail] = useState("");
-    const [error, setError] = useState("");
+    const [email, setEmail] = useState<string>("");
+    const [error, setError] = useState<string>("");
 
-    const handleSubmit = (event) => {
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -58,44 +72,26 @@ export default function Footer() {
                 </div>
                 <div>
                     <ul className="text-[clamp(.8rem,2vw,1rem)]">
-                        <li>
-                            <a href="#AboutUs" className="my-2 hover:text-white cursor-pointer">
-                                About Us
-                            </a>
-                        </li>
-                        <li className="my-2 hover:text-white cursor-pointer">
-                            <a href="#jobs">Jobs</a>
-                        </li>
-                        <li className="my-2 hover:text-white cursor-pointer">
-                            <a href="#press">Press</a>
-                        </li>
-                        <li className="my-2 hover:text-white cursor-pointer">
-                            <a href="#blog">Blog</a>
-                        </li>
+                        <li><a href="#AboutUs" className="my-2 hover:text-white cursor-pointer">About Us</a></li>
+                        <li className="my-2 hover:text-white cursor-pointer"><a href="#jobs">Jobs</a></li>
+                        <li className="my-2 hover:text-white cursor-pointer"><a href="#press">Press</a></li>
+                        <li className="my-2 hover:text-white cursor-pointer"><a href="#blog">Blog</a></li>
                     </ul>
                 </div>
                 <div>
                     <ul className="text-[clamp(.8rem,2vw,1rem)]">
-                        <li>
-                            <a href="#contactUs" className="my-2 hover:text-white cursor-pointer">
-                                Contact Us
-                            </a>
-                        </li>
-                        <li className="my-2 hover:text-white cursor-pointer">
-                            <a href="#terms">Terms</a>
-                        </li>
-                        <li className="my-2 hover:text-white cursor-pointer">
-                            <a href="#privacy">Privacy</a>
-                        </li>
+                        <li><a href="#contactUs" className="my-2 hover:text-white cursor-pointer">Contact Us</a></li>
+                        <li className="my-2 hover:text-white cursor-pointer"><a href="#terms">Terms</a></li>
+                        <li className="my-2 hover:text-white cursor-pointer"><a href="#privacy">Privacy</a></li>
                     </ul>
                 </div>
                 <div>
-                    <ul className="flex gap-3 md:gap-4 justify-center md:justify-start ">
-                        {[
+                    <ul className="flex gap-3 md:gap-4 justify-center md:justify-start">
+                        {([
                             { nameIcon: "Facebook", Icon: FaFacebookF, color: "text-blue-600" },
                             { nameIcon: "Twitter", Icon: FaTwitter, color: "text-blue-400" },
                             { nameIcon: "Instagram", Icon: FaInstagram, color: "text-pink-600" },
-                        ].map((item, index) => (
+                        ] as SocialIcon[]).map((item, index) => (
                             <li
                                 key={index}
                                 className={`
@@ -119,14 +115,13 @@ export default function Footer() {
     );
 }
 
-function CardFooter({ email, setEmail, handleSubmit, error }) {
+function CardFooter({ email, setEmail, handleSubmit, error }: CardFooterProps) {
     return (
         <div className="bg-footercard absolute -top-36 left-1/2 -translate-x-1/2 text-center rounded-xl shadow-2xl p-5 md:p-10 w-[85%] md:w-[50%] z-10">
             <h2 className="text-white font-bold text-[clamp(1rem,4vw,1.5rem)] mb-4">Get early access today</h2>
             <p className="mb-10 text-gray-300 text-[clamp(.8rem,2vw,1.1rem)]">
                 It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.
             </p>
-
             <form onSubmit={handleSubmit} className="flex flex-col lg:flex-row gap-4 lg:items-start justify-center h-[clamp(3rem,6vw,4rem)] my-4 lg:my-0">
                 <div className="flex flex-col flex-1 text-left">
                     <input
@@ -140,7 +135,6 @@ function CardFooter({ email, setEmail, handleSubmit, error }) {
                     />
                     {error && <p className="text-red-500 text-xs italic mt-1 ml-4 font-bold">{error}</p>}
                 </div>
-
                 <button
                     type="submit"
                     className="bg-cyan-500 hover:bg-cyan-300 text-white font-bold text-[clamp(.8rem,2vw,1rem)] py-1 sm:py-1.5 lg:py-2 px-[clamp(.8rem,2vw,1rem)] rounded-full transition-all duration-200 shadow-lg cursor-pointer"

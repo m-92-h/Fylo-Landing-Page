@@ -1,9 +1,16 @@
-import iconAccessAnywhere from "../assets/images/icon-access-anywhere.svg";
-import iconAnyFile from "../assets/images/icon-any-file.svg";
-import iconCollaboration from "../assets/images/icon-collaboration.svg";
-import iconSecurity from "../assets/images/icon-security.svg";
+import iconAccessAnywhere from "../assets/icon-access-anywhere.svg";
+import iconAnyFile from "../assets/icon-any-file.svg";
+import iconCollaboration from "../assets/icon-collaboration.svg";
+import iconSecurity from "../assets/icon-security.svg";
 
-export default function ComponentTwo() {
+interface CardProps {
+    icon: string;
+    iconTitle: string;
+    title: string;
+    description: string;
+}
+
+export default function Features() {
     return (
         <div className="component-two grid items-center justify-center md:grid-cols-2 gap-24 p-8 md:p-10 lg:p-12 text-white">
             <Card
@@ -38,7 +45,7 @@ export default function ComponentTwo() {
     );
 }
 
-function Card({ icon, iconTitle, title, description }) {
+function Card({ icon, iconTitle, title, description }: CardProps) {
     return (
         <div>
             <div className="flex justify-center">

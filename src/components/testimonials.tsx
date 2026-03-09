@@ -1,9 +1,16 @@
-import profile1 from "../assets/images/profile-1.jpg";
-import profile2 from "../assets/images/profile-2.jpg";
-import profile3 from "../assets/images/profile-3.jpg";
-import bgQuotes from "../assets/images/bg-quotes.png";
+import profile1 from "../assets/profile-1.jpg";
+import profile2 from "../assets/profile-2.jpg";
+import profile3 from "../assets/profile-3.jpg";
+import bgQuotes from "../assets/bg-quotes.png";
 
-export default function Cards() {
+interface CardProps {
+    quote: string;
+    profileImg: string;
+    name: string;
+    title: string;
+}
+
+export default function Testimonials() {
     return (
         <div className="w-[80%] md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mt-26 mb-54 lg:my-64 relative">
             <img src={bgQuotes} alt="background quotes" className="w-10 sm:w-12 md:w-14 absolute -top-6 sm:-top-8 md:-top-9 -left-3 sm:-left-4 z-0" />
@@ -32,7 +39,7 @@ export default function Cards() {
     );
 }
 
-function Card({ quote, profileImg, name, title }) {
+function Card({ quote, profileImg, name, title }: CardProps) {
     return (
         <div className="bg-card p-6 rounded-md text-start shadow-lg relative z-10">
             <p className="text-gray-100 text-[12px] sm:text-[14px] lg:text-[16px] mb-8">{quote}</p>

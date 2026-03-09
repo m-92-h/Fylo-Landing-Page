@@ -24,12 +24,12 @@
 }
 
 .component-one-bg {
-    background-image: url("./assets/images/bg-curvy-mobile.svg");
+    background-image: url("./assets/bg-curvy-mobile.svg");
 }
 
 @media (min-width: 425px) {
     .component-one-bg {
-        background-image: url("./assets/images/bg-curvy-desktop.svg");
+        background-image: url("./assets/bg-curvy-desktop.svg");
         background-size: contain;
     }
 }

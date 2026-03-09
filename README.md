@@ -1,72 +1,87 @@
-# Fylo Dark Theme Landing Page
+# 🌐 Fylo - Dark Theme Landing Page
 
-![Fylo Landing Page Preview](public/preview.jpg)
+> A modern and responsive dark-themed landing page for a cloud file storage service, built with the latest frontend technologies.
 
-A modern and responsive landing page solution for the Fylo Dark Theme challenge from [Frontend Mentor](https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd).
+---
 
-## Overview
+## 📸 Preview
 
-This project is a solution to the Fylo Dark Theme Landing Page challenge. It's a modern, responsive landing page featuring a dark theme design for a cloud storage service.
+![Fylo Landing Page](./public/preview.jpg)
 
-## Features
+---
 
--   Fully responsive design
--   Dark theme UI
--   Modern and clean interface
--   SEO optimized
--   Fast performance
+## ✨ Features
 
-## Built With
+- Fully responsive design (Mobile, Tablet, Desktop)
+- Dark theme with smooth UI
+- Email validation form
+- Animated hover effects
+- Clean component-based architecture
 
--   React
--   Vite
--   Tailwind CSS
--   JavaScript (ES6)
--   React Icons
--   Frontend Mentor assets
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Version | Purpose |
+|---|---|---|
+| [React](https://react.dev/) | 19 | UI Library |
+| [TypeScript](https://www.typescriptlang.org/) | 5 | Type Safety |
+| [Vite](https://vitejs.dev/) | 7 | Build Tool & Dev Server |
+| [Tailwind CSS](https://tailwindcss.com/) | 4 | Styling |
+| [React Icons](https://react-icons.github.io/react-icons/) | 5 | Icons |
+
+---
+
+## 📁 Project Structure
+
+```
+FYLO-LANDING-PAGE/
+│
+├── public/                  # Static files served directly
+├── src/
+│   ├── assets/              # Images and icons used inside the site
+│   ├── components/           # React components
+│   ├── App.tsx              # Root component
+│   ├── index.css            # Global styles
+│   └── main.tsx             # Entry point
+│
+├── index.html               # HTML template
+├── vite.config.ts           # Vite configuration
+├── tsconfig.json            # TypeScript configuration
+├── tsconfig.app.json        # TypeScript app configuration
+├── tsconfig.node.json       # TypeScript node configuration
+└── package.json             # Dependencies and scripts
+```
+
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
--   Node.js (v16 or higher)
--   npm or yarn
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (v18 or higher)
+- npm
 
 ### Installation
 
+1. **Clone the repository**
 ```bash
-git clone https://github.com/m-92-h/Fylo-Landing-Page.git
-cd fylo-master
+git clone https://github.com/m-92-h/fylo-landing-page.git
+```
+
+2. **Navigate to the project folder**
+```bash
+cd fylo-landing-page
+```
+
+3. **Install dependencies**
+```bash
 npm install
 ```
 
-### Running
-
+4. **Start the development server**
 ```bash
-# Development server
 npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
 ```
-
-## Project Structure
-
-```
-src/
-├── App.jsx
-├── Header.jsx
-├── Footer.jsx
-├── ComponentOne.jsx
-├── ComponentTwo.jsx
-├── ComponentThree.jsx
-├── Cards.jsx
-├── index.css
-├── assets/
-└── images/
-```
-
-## License
-
-This project is open source and available under the MIT License.

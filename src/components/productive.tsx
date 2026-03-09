@@ -1,7 +1,7 @@
-import illustrationStayProductive from "../assets/images/illustration-stay-productive.png";
-import iconArrow from "../assets/images/icon-arrow.svg";
+import illustrationStayProductive from "../assets/illustration-stay-productive.png";
+import iconArrow from "../assets/icon-arrow.svg";
 
-export default function ComponentThree() {
+export default function Productive() {
     return (
         <div className="component-three grid md:grid-cols-2 gap-x-16 px-6 md:px-0 md:w-[80%] mx-auto my-20">
             <div>

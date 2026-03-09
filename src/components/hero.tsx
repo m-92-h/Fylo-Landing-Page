@@ -1,6 +1,6 @@
-import illustrationIntro from "../assets/images/illustration-intro.png";
+import illustrationIntro from "../assets/illustration-intro.png";
 
-export default function ComponentOne() {
+export default function Hero() {
     return (
         <div className="component-one-bg flex flex-col items-center pt-14 md:pt-20 lg:pt-24 px-6 md:px-0">
             <div className="text-center mb-8 w-2xs sm:w-md lg:w-2xl transition-all duration-300">
