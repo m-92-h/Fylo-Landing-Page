@@ -1,9 +1,9 @@
-import Header from "./components/header";
-import Hero from "./components/hero";
-import Features from "./components/features";
-import Productive from "./components/productive";
-import Testimonials from "./components/testimonials";
-import Footer from "./components/footer";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Features from "./components/Features";
+import Productive from "./components/Productive";
+import Testimonials from "./components/Testimonials";
+import Footer from "./components/Footer";
 
 import type { CSSProperties } from "react";
 
